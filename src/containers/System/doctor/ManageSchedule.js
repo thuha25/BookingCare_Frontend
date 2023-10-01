@@ -37,7 +37,6 @@ class ManageSchedule extends Component {
       if (data && data.length > 0) {
         data = data.map((item) => ({ ...item, isSelected: false }));
       }
-      console.log(data);
       this.setState({
         rangeTime: data,
       });
@@ -108,12 +107,16 @@ class ManageSchedule extends Component {
       doctorId: selectedDoctor.value,
       formatedDate: formatedDate,
     });
-    console.log("check res:saveBulkScheduleDoctor", res);
+    if (res && res.errCode === 0) {
+      toast.success("Save scheduleDoctor successfully");
+    } else {
+      toast.error("error saveBulkScheduleDoctor");
+    }
   };
   render() {
     let { rangeTime } = this.state;
     let { language } = this.props;
-    console.log(rangeTime);
+    let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
     return (
       <div className="manage-schedule-container">
         <div className="m-s-title">
@@ -139,7 +142,7 @@ class ManageSchedule extends Component {
                 className="form-control"
                 onChange={this.handleOnchangeDatePicker}
                 value={this.state.currentDate}
-                minDate={new Date()}
+                minDate={yesterday}
               />
             </div>
             <div className="col-12 pick-hour-container">
