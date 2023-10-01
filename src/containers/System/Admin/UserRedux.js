@@ -191,7 +191,6 @@ class UserRedux extends Component {
     let positions = this.state.positionArr;
     let roles = this.state.roleArr;
     let language = this.props.language;
-    let isLoadingGender = this.props.isLoadingGender;
 
     let {
       email,
@@ -203,7 +202,6 @@ class UserRedux extends Component {
       gender,
       position,
       role,
-      avatar,
     } = this.state;
     return (
       <div className="user-redux-container">

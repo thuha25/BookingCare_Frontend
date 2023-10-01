@@ -8,7 +8,7 @@ class HomeFooter extends Component {
         <p>
           &copy; 2021 Booking care. More information, please visit my youtube
           channel.
-          <a href="#"> &#8594; Click here &#8592;</a>
+          <a href="/home"> &#8594; Click here &#8592;</a>
         </p>
       </div>
     );
