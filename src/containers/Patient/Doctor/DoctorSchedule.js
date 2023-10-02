@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./DoctorSchedule.scss";
 import moment from "moment/moment";
-import localization from "moment/locale/vi";
+// import localization from "moment/locale/vi";
 import { LANGUAGES } from "../../../utils";
 import { FormattedMessage } from "react-intl";
 import { getScheduleDoctorByDate } from "../../../services/userService";
