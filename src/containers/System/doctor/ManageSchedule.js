@@ -95,7 +95,7 @@ class ManageSchedule extends Component {
           object.doctorId = selectedDoctor.value;
           object.date = formatedDate;
           object.timeType = schedule.keyMap;
-          result.push(object);
+          return result.push(object);
         });
       } else {
         toast.error("Invalid selected time");
