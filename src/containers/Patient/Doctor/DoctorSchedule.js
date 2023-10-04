@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./DoctorSchedule.scss";
 import moment from "moment/moment";
-// import localization from "moment/locale/vi";
+import localization from "moment/locale/vi";
 import { LANGUAGES } from "../../../utils";
 import { FormattedMessage } from "react-intl";
 import { getScheduleDoctorByDate } from "../../../services/userService";
@@ -21,11 +21,18 @@ class DoctorSchedule extends Component {
   async componentDidMount() {
     let { language } = this.props;
     let allDays = this.getArrDays(language);
-    if (allDays && allDays.length > 0) {
+    if (this.props.doctorIdFromParent) {
+      let res = await getScheduleDoctorByDate(
+        this.props.doctorIdFromParent,
+        allDays[0].value
+      );
       this.setState({
-        allDays: allDays,
+        allAvalableTime: res.data ? res.data : [],
       });
     }
+    this.setState({
+      allDays: allDays,
+    });
   }
 
   capitalizeFirstLetter(string) {

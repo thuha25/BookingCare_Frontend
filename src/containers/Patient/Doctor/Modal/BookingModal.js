@@ -113,7 +113,7 @@ class BookingModal extends Component {
       let name =
         language === LANGUAGES.VI
           ? `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
-          : `${dataTime.doctorData.firstName} ${dataTime.doctor.lastName}`;
+          : `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`;
 
       return name;
     }
@@ -122,14 +122,16 @@ class BookingModal extends Component {
   handleConfirmBooking = async () => {
     let date = new Date(this.state.birthday).getTime();
     let timeString = this.buildTimeBooking(this.props.dataTime);
-    let doctorName = this.buildoctorName(this.props.doctorName);
+    let doctorName = this.buildoctorName(this.props.dataTime);
+
     let res = await postPatientBookAppointment({
       fullName: this.state.fullName,
       phoneNumber: this.state.phoneNumber,
       email: this.state.email,
       address: this.state.address,
       reason: this.state.reason,
-      date: date,
+      date: this.props.dataTime.date,
+      birthday: date,
       selectedGender: this.state.selectedGender.value,
       doctorId: this.state.doctorId,
       timeType: this.state.timeType,
@@ -150,6 +152,7 @@ class BookingModal extends Component {
     if (dataTime && !_.isEmpty(dataTime)) {
       doctorId = dataTime.doctorId;
     }
+    // console.log("check date time", dataTime);
     return (
       <Modal
         isOpen={isOpenModal}
@@ -172,6 +175,8 @@ class BookingModal extends Component {
                 doctorId={doctorId}
                 isShowDescriptionDoctor={false}
                 dataTime={dataTime}
+                isShowLinkDetail={false}
+                isShowPrice={true}
               />
             </div>
             <div className="row">
