@@ -2,7 +2,10 @@
     cursor: pointer;
 
     .specialty-name {
-        padding: 10px 0px;
+        padding    : 10px 0px;
+        text-align : center;
+        font-size  : 18px;
+        font-weight: 500;
 
         &:hover {
             color: #45c3d2;

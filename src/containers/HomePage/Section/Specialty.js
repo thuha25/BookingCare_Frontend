@@ -24,6 +24,7 @@ class Specialty extends Component {
       this.props.history.push(`/detail-specialty/${item.id}`);
     }
   };
+
   render() {
     let { dataSpecially } = this.state;
     return (
@@ -38,7 +39,12 @@ class Specialty extends Component {
             </button>
           </div>
           <div className="section-body">
-            <Slider {...this.props.settings}>
+            <Slider
+              {...this.props.settings}
+              autoplay={true}
+              autoplaySpeed={2000}
+              infinite={true}
+            >
               {dataSpecially &&
                 dataSpecially.length > 0 &&
                 dataSpecially.map((item, index) => {
@@ -54,7 +60,9 @@ class Specialty extends Component {
                           backgroundImage: `url(${item.image})`,
                         }}
                       ></div>
-                      <div className="specialty-name">{item.name}</div>
+                      <div className="specialty-name">
+                        <FormattedMessage id={`specialty.${item.name}`} />
+                      </div>
                     </div>
                   );
                 })}

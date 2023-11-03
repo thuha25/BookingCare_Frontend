@@ -5,6 +5,7 @@ import * as actions from "../../../store/actions";
 import { LANGUAGES } from "../../../utils";
 import { FormattedMessage } from "react-intl";
 import { withRouter } from "react-router";
+import "./OutStandingDoctor.scss";
 class OutStandingDoctor extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,7 @@ class OutStandingDoctor extends Component {
       this.props.history.push(`/detail-doctor/${doctor.id}`);
     }
   };
+
   render() {
     let arrDoctors = this.state.arrDoctors;
     let { language } = this.props;
@@ -43,7 +45,12 @@ class OutStandingDoctor extends Component {
             </button>
           </div>
           <div className="section-body">
-            <Slider {...this.props.settings}>
+            <Slider
+              {...this.props.settings}
+              autoplay={true}
+              autoplaySpeed={2000}
+              infinite={true}
+            >
               {arrDoctors &&
                 arrDoctors.length > 0 &&
                 arrDoctors.map((item, index) => {
@@ -53,8 +60,8 @@ class OutStandingDoctor extends Component {
                       "binary"
                     );
                   }
-                  let nameVi = `${item.positionData.valueVi},${item.lastName} ${item.firstName}`;
-                  let nameEn = `${item.positionData.valueEn},${item.firstName} ${item.lastName}`;
+                  let nameVi = `${item.positionData.valueVi}.${item.lastName} ${item.firstName}`;
+                  let nameEn = `${item.positionData.valueEn}.${item.firstName} ${item.lastName}`;
                   return (
                     <div
                       className="section-customize"
@@ -71,10 +78,9 @@ class OutStandingDoctor extends Component {
                           ></div>
                         </div>
                         <div className="position text-center">
-                          <div>
+                          <div className="name">
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                           </div>
-                          <div>Cơ xương khớp</div>
                         </div>
                       </div>
                     </div>

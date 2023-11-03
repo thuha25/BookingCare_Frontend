@@ -4,7 +4,7 @@ import "./MedicalFacility.scss";
 import Slider from "react-slick";
 import { getAllClinic } from "../../../services/userService";
 import { withRouter } from "react-router";
-
+import { FormattedMessage } from "react-intl";
 class MedicalFacility extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +31,18 @@ class MedicalFacility extends Component {
       <div className="section-share section-medical-facility">
         <div className="section-container">
           <div className="section-header">
-            <span className="title-section">Cơ sở y tế nổi bật</span>
+            <span className="title-section">
+              <FormattedMessage id="homepage.clinic" />
+            </span>
             <button className="btn-section">Xem thêm</button>
           </div>
           <div className="section-body">
-            <Slider {...this.props.settings}>
+            <Slider
+              {...this.props.settings}
+              autoplay={true}
+              autoplaySpeed={2000}
+              infinite={true}
+            >
               {dataClinics &&
                 dataClinics.length > 0 &&
                 dataClinics.map((item, index) => {
@@ -51,7 +58,10 @@ class MedicalFacility extends Component {
                           backgroundImage: `url(${item.image})`,
                         }}
                       />
-                      <div className="clinic-name">{item.name}</div>
+                      <div className="clinic-name">
+                        {" "}
+                        <FormattedMessage id={`clinic.${item.name}`} />
+                      </div>
                     </div>
                   );
                 })}

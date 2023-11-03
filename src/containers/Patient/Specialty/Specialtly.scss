@@ -1,0 +1,94 @@
+.cuaso-vung {
+    height     : 100vh;
+    z-index    : 2000;
+    position   : fixed;
+    background : #fff;
+    top        : 0;
+    left       : 0;
+    width      : 100%;
+    padding-top: 50px;
+    overflow-y : scroll;
+    font-size  : 18px;
+
+    .cuaso-dau {
+        background        : #fff;
+        position          : fixed;
+        width             : 100%;
+        height            : 50px;
+        top               : 0;
+        left              : 0;
+        padding-left      : 50px;
+        -moz-box-shadow   : 1px 2px 4px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        box-shadow        : 1px 2px 4px rgba(0, 0, 0, .5);
+        z-index           : 2;
+
+        .cuaso-tieude {
+            line-height  : 50px;
+            font-size    : 20px;
+            text-overflow: ellipsis;
+            white-space  : nowrap;
+            overflow     : hidden;
+            padding-right: 15px;
+        }
+
+        .cuaso-dong,
+        .nut-dong {
+            position   : absolute;
+            height     : 50px;
+            width      : 50px;
+            top        : 0;
+            left       : 0;
+            line-height: 50px;
+            text-align : center;
+            border     : none;
+            background : transparent;
+            box-shadow : none;
+            outline    : none;
+            cursor     : pointer;
+        }
+    }
+
+    .cuaso-noidung {
+        .chuyenkhoa-ds {
+            ul {
+                list-style-type: none;
+                padding        : 0;
+                margin         : 0;
+
+                li {
+                    display      : block;
+                    overflow     : hidden;
+                    padding      : 15px;
+                    border-bottom: 1px solid #eee;
+                    position     : relative;
+
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    img {
+                        float       : left;
+                        margin-right: 20px;
+                        width       : 150px;
+                    }
+
+                    h3 {
+                        display    : block;
+                        line-height: 1.3em;
+                        font-size  : 16px;
+                        color      : #333;
+
+                        &:hover {
+                            text-decoration: none;
+                            cursor         : pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -6,13 +6,13 @@
         "select-room": "Choose hospital clinic",
         "doctor": "Doctor",
         "select-doctor":"Choose a good doctor",
-        "fee":"Checkup package",
+        "fee":"Examination package",
         "check-health":"General health check",
         "support":"Support",
         "welcome":"Welcome"
     },
     "banner":{
-        "title1": "EDICAL PLATFORM",
+        "title1": "MEDICAL PLATFORM",
         "title2": "COMPREHENSIVE HEALTH CARE",
         "child1":"Specialized examination",
         "child2":"Remote examination",
@@ -56,9 +56,10 @@
         "image":"Avatar"
     },
     "homepage": {
-        "outstanding-doctor":"Last week's featured doctor",
+        "outstanding-doctor":"Prominent Doctor",
         "more-infor":"More info",
-        "specialty-popular":"Popular specialties"
+        "specialty-popular":"Popular specialties",
+        "clinic":"Healthcare establishment"
     },
     "manage-schedule":{
         "title": "Manage doctor's examination schedule",
@@ -111,5 +112,31 @@
             "specialty":"Specialty",
             "select-clinic": "Clinic"
         }
+    },
+    "specialty":{
+        "Cơ xương khớp": "Musculoskeletal",
+        "Thần kinh": "Neurology",
+        "Tiêu hoá": "Gastroenterology",
+        "Tim mạch": "Cardiology",
+        "Tai mũi họng": "Otorhinolaryngology",
+        "Cột sống": "Orthopedics",
+        "Nhi khoa": "Pediatrics",
+        "Sản Phụ khoa": "Obstetrics Gynecology",
+        "Da liễu": "Dermatology",
+        "Y học Cổ truyền": "Traditional Medicine",
+        "Vô sinh - Hiếm muộn": "Late Donation",
+        "Tư vấn, trị liệu Tâm lý": "Psychological Counseling and Therapy"
+    },
+    "clinic": {
+        "Hệ thống y tế MEDLATEC": "MEDLATEC Healthcare System",
+        "Trung tâm Khám sức khỏe định kỳ, Bệnh viện Trung ương Quân đội 108": "Periodic Health Examination Center, Military Central Hospital 108",
+        "Bệnh viện Hữu nghị Việt Đức": "Viet Duc Friendship Hospital",
+        "Bệnh viện Ung bướu Hưng Việt": "Hung Viet Tumor Hospital",
+        "Phòng khám Bệnh viện Đại học Y Dược 1": "Outpatient Clinic, University of Medicine 1 Hospital",
+        "Bệnh viện Chợ Rẫy": "Cho Ray Hospital"
+    },      
+    "about":{
+        "media": "Media talks about Booking care",
+        "script":"BookingCare's solution is to build a technology platform that connects a network of skilled doctors and reputable healthcare facilities with clear, up-to-date, and verified information. The application of technology makes it easy for patients to choose the right specialist for their issue and schedule appointments. Time-saving, intelligent, and effective are the three values and benefits that patients receive when booking appointments. It saves time, reduces waiting time, saves money, and effort. It's intelligent because it applies technology to connect patients with doctors and healthcare facilities. It's effective because patients are directed to the right specialty and the most suitable doctor for their needs."
     }
 }

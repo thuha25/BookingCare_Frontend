@@ -56,9 +56,10 @@
         "image":"Ảnh đại diện"
     },
     "homepage": {
-        "outstanding-doctor":"Bác sĩ nổi bật tuần qua",
+        "outstanding-doctor":"Bác sĩ nổi bật",
         "more-infor":"Xem thêm",
-        "specialty-popular":"Chuyên khoa phổ biến"
+        "specialty-popular":"Chuyên khoa phổ biến",
+        "clinic":"Cơ sở y tế nổi bật"
     },
     "manage-schedule":{
         "title": "Quản lý lịch khám bệnh của bác sĩ",
@@ -111,6 +112,32 @@
             "specialty":"Chọn chuyên khoa",
             "select-clinic": "Chọn phòng khám"
         }
+    },
+    "specialty":{
+        "Cơ xương khớp": "Cơ xương khớp",
+        "Thần kinh": "Thần kinh",
+        "Tiêu hoá": "Tiêu hoá",
+        "Tim mạch": "Tim mạch",
+        "Tai mũi họng": "Tai mũi họng",
+        "Cột sống": "Cột sống",
+        "Nhi khoa": "Nhi khoa",
+        "Sản Phụ khoa": "Sản phụ khoa",
+        "Da liễu": "Da liễu",
+        "Y học Cổ truyền": "Y học cổ truyền",
+        "Vô sinh - Hiếm muộn": "Vô sinh - Hiếm muộn",
+        "Tư vấn, trị liệu Tâm lý":"Tư vấn, trị liệu tâm lý"
+    },
+    "clinic":{
+        "Hệ thống y tế MEDLATEC":"Hệ thống y tế MEDLATEC",
+        "Trung tâm Khám sức khỏe định kỳ, Bệnh viện Trung ương Quân đội 108":"Trung tâm Khám sức khỏe định kỳ, Bệnh viện Trung ương Quân đội 108",
+        "Bệnh viện Hữu nghị Việt Đức":"Bệnh viện Việt Đức",
+        "Bệnh viện Ung bướu Hưng Việt":"Bệnh viện Ung bướu Hưng Việt",
+        "Phòng khám Bệnh viện Đại học Y Dược 1":"Phòng khám Bệnh viện Đại học Y Dược 1",
+        "Bệnh viện Chợ Rẫy":"Bệnh viện Chợ Rẫy"
+    },
+    "about":{
+        "media": "Truyền thông nói về Booking care",
+        "script":"Giải pháp của BookingCare là xây dựng nền tảng công nghệ kết nối mạng lưới bác sĩ giỏi và các cơ sở y tế uy tín với thông tin được xác thực rõ ràng, cập nhật. Ứng dụng công nghệ giúp người bệnh dễ dàng lựa chọn đúng bác sĩ chuyên khoa phù hợp với vấn đề của mình và Đặt lịch khám. Tiết kiệm, thông minh và hiệu quả là 3 giá trị, 3 lợi ích người bệnh nhận được qua việc đặt lịch khám. Tiết kiệm thời gian, giảm thời gian chờ đợi, tiết kiệm tiền bạc, công sức. Thông minh vì đã ứng dụng công nghệ trong kết nối người bệnh với bác sĩ và cơ sở y tế. Hiệu quả bởi người bệnh được định hướng đi khám đúng chuyên khoa, đúng bác sĩ phù hợp nhất."
     }
 
 }

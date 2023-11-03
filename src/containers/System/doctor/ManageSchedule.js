@@ -109,6 +109,11 @@ class ManageSchedule extends Component {
     });
     if (res && res.errCode === 0) {
       toast.success("Save scheduleDoctor successfully");
+      this.setState({
+        selectedDoctor: {},
+        currentDate: "",
+        rangeTime: rangeTime.map((item) => ({ ...item, isSelected: false })),
+      });
     } else {
       toast.error("error saveBulkScheduleDoctor");
     }

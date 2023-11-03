@@ -6,7 +6,6 @@ import { FormattedMessage } from "react-intl";
 import { LANGUAGES } from "../../utils";
 import { withRouter } from "react-router";
 import { changeLanguageApp } from "../../store/actions";
-
 class HomeHeader extends Component {
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
@@ -16,6 +15,16 @@ class HomeHeader extends Component {
       this.props.history.push("/home");
     }
   };
+  returnToSpeciality = () => {
+    if (this.props.history) {
+      this.props.history.push("/specialty");
+    }
+  };
+  returnToDoctor = () => {
+    if (this.props.history) {
+      this.props.history.push("/doctors");
+    }
+  };
   render() {
     let language = this.props.language;
     return (
@@ -23,7 +32,7 @@ class HomeHeader extends Component {
         <div className="home-header-container">
           <div className="home-header-content">
             <div className="left-content">
-              <i className="fas fa-bars"></i>
+              {/* <i className="fas fa-bars"></i> */}
               <img
                 className="header-logo"
                 src={logo}
@@ -34,8 +43,8 @@ class HomeHeader extends Component {
             <div className="center-content">
               <div className="child-content">
                 <div>
-                  <b>
-                    <FormattedMessage id="homeheader.speciality"></FormattedMessage>
+                  <b onClick={() => this.returnToSpeciality()}>
+                    <FormattedMessage id="homeheader.speciality" />
                   </b>
                 </div>
                 <div className="sub-title">
@@ -54,7 +63,7 @@ class HomeHeader extends Component {
               </div>
               <div className="child-content">
                 <div>
-                  <b>
+                  <b onClick={() => this.returnToDoctor()}>
                     <FormattedMessage id="homeheader.doctor"></FormattedMessage>
                   </b>
                 </div>
