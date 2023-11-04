@@ -5,11 +5,7 @@ class HomeFooter extends Component {
   render() {
     return (
       <div className="home-footer">
-        <p>
-          &copy; 2021 Booking care. More information, please visit my youtube
-          channel.
-          <a href="/home"> &#8594; Click here &#8592;</a>
-        </p>
+        <p style={{ fontSize: "16px" }}>&copy; Booking care.</p>
       </div>
     );
   }

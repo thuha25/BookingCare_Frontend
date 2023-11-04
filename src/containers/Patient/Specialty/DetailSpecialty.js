@@ -27,7 +27,6 @@ class DetailSpecialty extends Component {
       this.props.match.params.id
     ) {
       let id = this.props.match.params.id;
-
       let res = await getAllDetailSpecialtyById({
         id: id,
         location: "ALL",

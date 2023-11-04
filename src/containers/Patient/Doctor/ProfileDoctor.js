@@ -33,8 +33,11 @@ class ProfileDoctor extends Component {
     return result;
   };
   async componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.doctorId !== this.props.doctorId) {
-      //   this.getInforDoctor(this.props.doctorId);
+    if (this.props.doctorId !== prevProps.doctorId) {
+      let data = await this.getInforDoctor(this.props.doctorId);
+      this.setState({
+        dataProfile: data,
+      });
     }
   }
   renderTimeBooking = (dataTime) => {
