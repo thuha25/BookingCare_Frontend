@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import HomeHeader from "../../HomePage/HomeHeader";
+import HomeFooter from "../../HomePage/HomeFooter";
 import { connect } from "react-redux";
 import * as actions from "../../../store/actions";
 import { withRouter } from "react-router";
 import { LANGUAGES } from "../../../utils";
 import { FormattedMessage } from "react-intl";
-import "./Doctor.scss";
-class Doctor extends Component {
+
+import "./ListDoctors.scss";
+class ListDoctors extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,23 +40,22 @@ class Doctor extends Component {
     let { language } = this.props;
 
     return (
-      <div className="cuaso cuaso-mo">
-        <div className="cuaso-vung">
+      <div>
+        <HomeHeader />
+        <div className="danhsach">
           <div className="cuaso-dau">
-            <h5 className="cuaso-tieude">
-              <FormattedMessage id="homepage.outstanding-doctor" />
-            </h5>
             <button
               type="button"
               className="cuaso-dong"
-              data-dl-cuaso="chuyenkhoa"
+              data-dl-cuaso="bacsi"
               aria-label="Đóng"
               onClick={this.returnToHome}
             >
               <span className="bt-g bt-g-muiten-trai" aria-hidden="true">
-                <i className="fas fa-chevron-left"></i>
+                <i className="fas fa-home"></i>
               </span>
             </button>
+            <h5 className="cuaso-tieude">/ Danh sách bác sĩ nổi bật</h5>
           </div>
           <div className="cuaso-noidung">
             <div className="bacsi-ds" data-dl-tai="1">
@@ -88,6 +90,7 @@ class Doctor extends Component {
             </div>
           </div>
         </div>
+        <HomeFooter />
       </div>
     );
   }
@@ -107,4 +110,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Doctor));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(ListDoctors)
+);

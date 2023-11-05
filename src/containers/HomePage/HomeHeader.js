@@ -25,6 +25,11 @@ class HomeHeader extends Component {
       this.props.history.push("/doctors");
     }
   };
+  returnToHealthFacilities = () => {
+    if (this.props.history) {
+      this.props.history.push("/HealthFacilities");
+    }
+  };
   render() {
     let language = this.props.language;
     return (
@@ -53,7 +58,7 @@ class HomeHeader extends Component {
               </div>
               <div className="child-content">
                 <div>
-                  <b>
+                  <b onClick={() => this.returnToHealthFacilities()}>
                     <FormattedMessage id="homeheader.health-facility"></FormattedMessage>
                   </b>
                 </div>
@@ -71,7 +76,7 @@ class HomeHeader extends Component {
                   <FormattedMessage id="homeheader.select-doctor"></FormattedMessage>
                 </div>
               </div>
-              <div className="child-content">
+              {/* <div className="child-content">
                 <div>
                   <b>
                     <FormattedMessage id="homeheader.fee"></FormattedMessage>
@@ -80,7 +85,7 @@ class HomeHeader extends Component {
                 <div className="sub-title">
                   <FormattedMessage id="homeheader.check-health"></FormattedMessage>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="right-content">
               <div className="support">
@@ -120,7 +125,6 @@ class HomeHeader extends Component {
               </div>
               <div className="title2">
                 <b>
-                  {" "}
                   <FormattedMessage id="banner.title2"></FormattedMessage>
                 </b>
               </div>

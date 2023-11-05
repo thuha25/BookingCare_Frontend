@@ -50,7 +50,7 @@
     }
 
     .cuaso-noidung {
-        .chuyenkhoa-ds {
+        .bacsi-ds {
             ul {
                 list-style-type: none;
                 padding        : 0;
@@ -70,9 +70,11 @@
                     }
 
                     img {
-                        float       : left;
-                        margin-right: 20px;
-                        width       : 150px;
+                        float        : left;
+                        margin-right : 20px;
+                        width        : 120px;
+                        height       : 120px;
+                        border-radius: 50%;
                     }
 
                     h3 {
@@ -80,6 +82,7 @@
                         line-height: 1.3em;
                         font-size  : 16px;
                         color      : #333;
+                        padding-top: 10px;
 
                         &:hover {
                             text-decoration: none;

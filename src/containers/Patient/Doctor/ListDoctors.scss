@@ -1,27 +1,14 @@
-.cuaso-vung {
-    height     : 100vh;
-    z-index    : 2000;
-    position   : fixed;
-    background : #fff;
-    top        : 0;
-    left       : 0;
-    width      : 100%;
-    padding-top: 50px;
-    overflow-y : scroll;
-    font-size  : 18px;
+.danhsach {
+    background  : #fff;
+    overflow-y  : scroll;
+    font-size   : 16px;
+    padding-left: 60px;
 
     .cuaso-dau {
-        background        : #fff;
-        position          : fixed;
-        width             : 100%;
-        height            : 50px;
-        top               : 0;
-        left              : 0;
-        padding-left      : 50px;
-        -moz-box-shadow   : 1px 2px 4px rgba(0, 0, 0, 0.5);
-        -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-        box-shadow        : 1px 2px 4px rgba(0, 0, 0, .5);
-        z-index           : 2;
+        display   : flex;
+        flex-wrap : wrap;
+        background: #fff;
+        height    : 50px;
 
         .cuaso-tieude {
             line-height  : 50px;
@@ -29,7 +16,9 @@
             text-overflow: ellipsis;
             white-space  : nowrap;
             overflow     : hidden;
-            padding-right: 15px;
+            padding-left : 20px;
+            width        : 100%;
+            color        : #45c3d2
         }
 
         .cuaso-dong,
@@ -37,8 +26,7 @@
             position   : absolute;
             height     : 50px;
             width      : 50px;
-            top        : 0;
-            left       : 0;
+            left       : 40px;
             line-height: 50px;
             text-align : center;
             border     : none;
@@ -47,10 +35,12 @@
             outline    : none;
             cursor     : pointer;
         }
+
+        border-bottom: 1px solid #ccc;
     }
 
     .cuaso-noidung {
-        .chuyenkhoa-ds {
+        .bacsi-ds {
             ul {
                 list-style-type: none;
                 padding        : 0;
@@ -70,16 +60,19 @@
                     }
 
                     img {
-                        float       : left;
-                        margin-right: 20px;
-                        width       : 150px;
+                        height       : 120px;
+                        float        : left;
+                        margin-right : 20px;
+                        width        : 120px;
+                        border-radius: 50%;
                     }
 
                     h3 {
                         display    : block;
                         line-height: 1.3em;
-                        font-size  : 16px;
+                        font-size  : 14px;
                         color      : #333;
+                        padding-top: 5px;
 
                         &:hover {
                             text-decoration: none;
